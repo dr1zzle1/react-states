@@ -14,7 +14,7 @@ function App() {
     if (!countries.length) {
       axios.get(ALL_COUNTRIES).then((response) => setCountries(response.data));
     }
-  }, []);
+  }, [countries.length]);
   return (
     <>
       <Header />
